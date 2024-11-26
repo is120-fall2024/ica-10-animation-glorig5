@@ -1,1 +1,110 @@
 /* EDIT THESE STYLES FOR YOUR TASKS */
+.logo img{
+    transition: all;
+}
+.logo img:hover{
+    transform: scale(115%, 115%) rotate(20deg);
+}
+
+.quote{
+    text-align: center;
+    line-height: 1.5;
+}
+.fancy{
+    background-image: linear-gradient(90deg,green,yellow);
+    background-size: 0% 3px;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    text-decoration: none;
+    transition: background-size 450ms ease;
+}
+.fancy:hover{
+    background-size: 100% 3px;
+}
+.tasktext{
+    font-style: bold;
+    text-align: center;
+    font-size: 3em;
+}
+.box-5{
+    grid-column: 2;
+    grid-row: 2;
+    display: grid;
+    background-color: green !important;
+    animation: moveBox 4s infinite linear;
+}
+
+@keyframes moveBox {
+    0%, 100% {
+      grid-column: 2; 
+    }
+    25% {
+      grid-column: 1; 
+    }
+    50%{
+       grid-column: 2; 
+    }
+    75%{
+        grid-column: 3;
+    }
+  }
+
+  aside{
+    position: absolute;
+    right: 0;
+    bottom:0;
+    height: 200px;
+    width: 300px;
+    font-style: bold;
+    text-align: center;
+    font-size: 2em;
+    animation: slide 9s infinite;
+    background-color: yellowgreen;
+  }
+@keyframes slide {
+    0%,100%{
+        transform: translateX(-100%);
+    }
+    50%{
+        transform: translateX(100%) ;
+    }
+}
+.box-2{
+    background-image: linear-gradient(green,purple);
+    transition: background-image 0.5s ease;
+    font-style: bold;
+    text-align: center;
+    font-size: 2em;
+    color: white;
+}
+.box-2:hover{
+    animation: color 5s infinite linear;
+}
+@keyframes color {
+    0%{
+        filter:hue-rotate(0deg);
+    }
+    100%{
+        filter:hue-rotate(360deg);
+    }
+}
+.center-grid .box-1 svg{
+    animation: spin 8s linear infinite;
+}
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(90deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    75%{
+        transform: rotate(270deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
